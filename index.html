@@ -235,7 +235,7 @@
             .desktop-fields { display: contents; }
             .desktop-main-title { display: none !important; }
             .site-footer-desktop { display: none !important; }
-            .site-footer { display: block; }
+            .site-footer { display: none; }
         }
 
         /* ── HEADER ── */
@@ -780,40 +780,12 @@
 
         /* ── FOOTER ── */
         .site-footer {
-            background: #0a0f1a;
-            border-top: 1px solid #1e293b;
-            padding: 16px 24px;
-            text-align: center;
+            display: none;
         }
-        .footer-inner {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        .footer-logo {
-            font-family: 'Bebas Neue', cursive;
-            font-size: 1rem;
-            letter-spacing: 2px;
-            color: var(--green);
-        }
-        .footer-sep { color: #334155; font-size: 0.8rem; }
-        .footer-text { font-size: 0.72rem; color: #475569; font-weight: 500; }
 
         @media (min-width: 900px) {
-            .site-footer {
-                /* En desktop: el footer va dentro del desktop-main, no suelto */
-                display: none;
-            }
             .site-footer-desktop {
-                display: block !important;
-                background: #0a0f1a;
-                border-top: 1px solid #1e293b;
-                padding: 14px 24px;
-                text-align: center;
-                margin-top: 24px;
-                border-radius: 12px;
+                display: none !important;
             }
         }
 
@@ -1355,14 +1327,6 @@
             </div>
         </div>
 
-    <!-- Footer desktop (dentro del main) -->
-    <div class="site-footer-desktop" style="display:none;">
-        <div class="footer-inner">
-            <span class="footer-logo">Bájalo YA</span>
-            <span class="footer-sep">·</span>
-            <span class="footer-text">Servicio express por WhatsApp · México</span>
-        </div>
-    </div>
     </div>
 </div>
 </div><!-- /desktop-main -->
@@ -1524,15 +1488,6 @@ function enviarPedido() {
     actualizarAnalytics();
 }
 </script>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-    <div class="footer-inner">
-        <span class="footer-logo">Bájalo YA</span>
-        <span class="footer-sep">·</span>
-        <span class="footer-text">Servicio express por WhatsApp · México</span>
-    </div>
-</footer>
 
 </body>
 </html>
